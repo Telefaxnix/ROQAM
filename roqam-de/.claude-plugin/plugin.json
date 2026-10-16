@@ -1,0 +1,61 @@
+{
+  "name": "roqam-de",
+  "version": "1.0.0",
+  "author": {
+    "name": "Dominik Sieber"
+  },
+  "license": "MIT OR Apache-2.0",
+  "types": "./types/index.d.ts",
+  "description": "ROQAM (Readout & Quick Access Mod): Statusleiste für Claude Code (Konsole und Desktop-App, Windows): Kontext, Abo-Limits, Cache, Anthropic-Status, Modell, Version, Chats, Connectors; Himmel und Wetter am Ort (schau mal raus) und Stream-Tempo; Knöpfe Sichern, Übergabe, Komprimieren, Neu, Aufnahme (blendet Pfade, Kosten und Konten aus, von selbst bei OBS u. a.).",
+  "userConfig": {
+    "ort": {
+      "type": "string",
+      "title": "Ort für Himmel und Wetter",
+      "description": "Ortsname, z. B. «Bern». Leer = keine Himmel- und Wetteranzeige. Daten von Open-Meteo und 7Timer, ohne Konto.",
+      "required": false,
+      "default": ""
+    },
+    "apiKosten": {
+      "type": "boolean",
+      "title": "API-Kosten anzeigen",
+      "description": "Was Sitzung und Abo-Monat über die API gekostet hätten (Vergleichswert in CHF).",
+      "required": false,
+      "default": true
+    },
+    "higgsfield": {
+      "type": "boolean",
+      "title": "Higgsfield-Credits anzeigen",
+      "description": "Erscheint von selbst, sobald der claude.ai-Connector «Higgsfield» verbunden ist (auch nachträglich). false = nie anzeigen.",
+      "required": false,
+      "default": true
+    },
+    "higgsfieldMax": {
+      "type": "number",
+      "title": "Higgsfield-Credits pro Monat",
+      "description": "Credits des Higgsfield-Abos (Starter 270).",
+      "required": false,
+      "default": 270
+    },
+    "aktionen": {
+      "type": "boolean",
+      "title": "Neue Aktionen von Anthropic melden",
+      "description": "Zeigt «⚑ Neue Aktion», wenn sich in ~/.claude.json eine Aktion ändert (Cloud-Guthaben, Gästepässe, Rabatt, Hinweise zum Nutzungslimit). Ein Klick darauf zeigt, was neu ist, und blendet den Hinweis aus.",
+      "required": false,
+      "default": true
+    },
+    "wetterUrl": {
+      "type": "string",
+      "title": "Eigene Wetterstation (Adresse)",
+      "description": "Leer = Temperatur, Taupunkt und Feuchte von Open-Meteo am Ort. Sonst die Adresse einer eigenen Wetter-Schnittstelle (JSON mit latest.temp.value, latest.dew_point.value, latest.hum.value).",
+      "required": false,
+      "default": ""
+    },
+    "neuOrdner": {
+      "type": "string",
+      "title": "Ordner für «+ Neu»",
+      "description": "Leer = neuer Chat im Ordner des aktuellen Chats. Sonst immer in diesem Ordner, z. B. «C:\\Projekte».",
+      "required": false,
+      "default": ""
+    }
+  }
+}

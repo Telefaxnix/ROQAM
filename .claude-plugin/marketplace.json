@@ -1,0 +1,30 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "roqam",
+  "description": "ROQAM (Readout & Quick Access Mod): a status bar for Claude Code (terminal and desktop app, Windows) with English or German labels.",
+  "owner": {
+    "name": "Dominik Sieber"
+  },
+  "plugins": [
+    {
+      "name": "roqam",
+      "description": "Status bar above the prompt: context, plan limits, prompt-cache countdown, Anthropic status, model, version, chats, connectors, one-click buttons, recording mode, and tonight's sky and weather at your location. Windows; labels in English.",
+      "author": {
+        "name": "Dominik Sieber"
+      },
+      "source": "./roqam",
+      "category": "productivity",
+      "homepage": "https://github.com/Telefaxnix/ROQAM"
+    },
+    {
+      "name": "roqam-de",
+      "description": "Status bar above the prompt: context, plan limits, prompt-cache countdown, Anthropic status, model, version, chats, connectors, one-click buttons, recording mode, and tonight's sky and weather at your location. Windows; labels in German.",
+      "author": {
+        "name": "Dominik Sieber"
+      },
+      "source": "./roqam-de",
+      "category": "productivity",
+      "homepage": "https://github.com/Telefaxnix/ROQAM"
+    }
+  ]
+}

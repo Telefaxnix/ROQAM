@@ -1,0 +1,61 @@
+{
+  "name": "roqam",
+  "version": "1.0.0",
+  "author": {
+    "name": "Dominik Sieber"
+  },
+  "license": "MIT OR Apache-2.0",
+  "types": "./types/index.d.ts",
+  "description": "ROQAM (Readout & Quick Access Mod): status bar for Claude Code (terminal and desktop app, Windows) with English labels: context, plan limits, cache, Anthropic status, model, version, chats, connectors; sky and weather at your location and streaming speed; buttons Save, Handoff, Compact, New, Rec (hides paths, costs and accounts, switches on by itself with OBS and similar).",
+  "userConfig": {
+    "location": {
+      "type": "string",
+      "title": "Location for sky and weather",
+      "description": "Name of a town or city, e.g. \"London\". Leave empty to hide sky and weather. Data from Open-Meteo and 7Timer, no account needed.",
+      "required": false,
+      "default": ""
+    },
+    "apiCost": {
+      "type": "boolean",
+      "title": "Show API costs",
+      "description": "What the session and the plan month would have cost via the API (comparison value in USD).",
+      "required": false,
+      "default": true
+    },
+    "higgsfield": {
+      "type": "boolean",
+      "title": "Show Higgsfield credits",
+      "description": "Shown automatically once the claude.ai connector \"Higgsfield\" is connected (also later on). false = never show.",
+      "required": false,
+      "default": true
+    },
+    "higgsfieldMax": {
+      "type": "number",
+      "title": "Higgsfield credits per month",
+      "description": "Credits of your Higgsfield plan (Starter 270).",
+      "required": false,
+      "default": 270
+    },
+    "promotions": {
+      "type": "boolean",
+      "title": "Report new promotions from Anthropic",
+      "description": "Shows \"⚑ New promotion\" when a promotion changes in ~/.claude.json (cloud credit, guest passes, discount, usage-limit notices). Clicking it shows what changed and hides the notice.",
+      "required": false,
+      "default": true
+    },
+    "weatherUrl": {
+      "type": "string",
+      "title": "Own weather station (address)",
+      "description": "Empty = temperature, dew point and humidity from Open-Meteo at your location. Otherwise the address of your own weather API (JSON with latest.temp.value, latest.dew_point.value, latest.hum.value).",
+      "required": false,
+      "default": ""
+    },
+    "newChatFolder": {
+      "type": "string",
+      "title": "Folder for \"+ New\"",
+      "description": "Empty = new chat in the folder of the current chat. Otherwise always in this folder.",
+      "required": false,
+      "default": ""
+    }
+  }
+}
